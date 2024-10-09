@@ -1,0 +1,143 @@
+h1{
+    color:rgb(36, 36, 173);
+    font-size: 250px;
+    /* font-family:('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap'); */
+    font-weight: bold;
+    font-style:normal;
+    text-align: left;
+    text-transform: lowercase;
+    /* text-decoration: underline; */
+    text-decoration-color: blanchedalmond;
+    text-decoration-style:dashed;
+    text-decoration-thickness: 10px;
+    text-decoration-skip: 20px;
+    /* text-shadow: 10px -10px 10px rgba(0, 0, 0, 0.497); */
+}
+h1:hover{
+    color: red;
+}
+h1:active{
+    color: blue;
+}
+body
+{
+margin: 0px;
+padding: 0px;
+}
+p
+{
+    font-size: 28px;
+    font-weight:lighter;
+    font-style:Helvetica; 
+    text-transform:initial;
+    text-indent:0px;
+    word-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    transform:translate(0px, -45px) ;
+
+    
+}
+    
+
+section
+{
+    background-color: #d4d9ec4f;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+div form
+{
+    background-color: white;
+    /* background: url(images/IMG-20170912-WA0003.jpg); */
+    width: 400px;
+    height: 380px;
+    text-align:center; 
+    padding: 20px;
+    box-sizing:border-box;
+    margin: auto;
+    border:solid white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px;
+    
+    
+}
+
+input
+{
+width: 360px;
+height: 50px;
+padding: 10px;
+box-sizing: border-box;
+margin-bottom: 5px;
+border: solid ; color: rgba(204, 191, 191, 0.356);
+border-radius: 6px;
+/* box-shadow: 10px 10px 50px; */
+}
+
+input:focus::placeholder
+{
+    color: rgb(196, 182, 182);
+}
+
+#loginbtn
+{
+background-color: rgb(81, 116, 231);
+border: rgb(41, 41, 173);
+color: white;
+width: 360px;
+height: 50px;
+border-radius: 6px;
+font-size: 20px;
+font-weight: bold;
+}
+#loginbtn:hover{
+    background-color: rgb(66, 120, 186);
+    border:rgb(78, 78, 201) solid 1px; 
+    
+}
+#registerbtn
+{
+background-color: rgb(60, 204, 60);
+border: rgb(69, 69, 185);
+color: white;
+width: 200px;
+height: 50px;
+text-decoration: none;
+border-radius: 5px;
+font-size: 15px;
+font-weight:bold;
+}
+#registerbtn:hover{
+    background-color: rgb(43, 158, 43);
+    border: rgb(123, 231, 123) solid 1px;
+}
+a{
+    text-decoration: none;
+	color: white;
+}
+a:hover{
+    text-decoration: none;
+    margin-bottom: 20px ;
+    text-decoration: underline;
+}
+input:focus{
+    border:solid rgb(96, 96, 207);
+    outline: rgb(114, 114, 223);
+    
+}
+a:visited{
+    color: blue;
+}
+#a1:visited{
+    color: white;
+}
+#a1:hover{
+    text-decoration: none;
+}
+input{
+    color: black;
+}

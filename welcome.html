@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>   
+  #RegisterConfirmationMessage {
+    margin: 5px 0px;
+    color: #007500;
+    font-size: 20px;
+  }
+
+  #loginMessage {
+    color: #000000;
+    margin-block-start: auto;
+    font-size: large;
+  }
+
+  #button {
+    float: right;
+  }
+</style>
+<body>
+  <div class="modal" id="Loginmodal" data-toggle="modal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">    
+          <h3 id="RegisterConfirmationMessage">Your Account has been registered successfully</h3>
+        </div>
+        <div class="modal-body">
+          <h3 id="loginMessage" style="color: black; margin-block-start: auto; font-size: large">Do you want to login now?</h3>
+          <div id="button">
+            <button type="button" class="btn btn-success" id="loginYes" onclick="window.location.href='index.html'">Yes</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="loginNo" onclick="window.location.href='register.html'">No</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

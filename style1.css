@@ -1,0 +1,66 @@
+#showpassword {
+    margin-top: 3px;
+    border-radius: 1.25em;
+}
+
+.error {
+    color: #ff0000 !important;
+    font-size: small;
+}
+
+#name, #email, #phonenumber, #password, #confirmpassword, #loginaddress, #loginpassword, #passwordnew, #confirmpasswordnew, #updatename, #updateemail, #updatephonenumber { 
+    color: #000000 !important;
+}
+
+#termsconditions {
+    margin-top: 2px;
+}
+
+.error-container {
+    margin-top: -30px; 
+}
+
+.center-content {
+    text-align: center;
+    margin-top: 50px; 
+}
+
+.hr-container {
+    display: flex;
+    align-items: center;
+    margin: -3% -2% 4%;
+}
+
+.hr-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #000; 
+    margin: 0 10px; 
+}
+
+#forgotten {
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 33px;
+    color: #000000;
+}
+
+#forgotten:hover {
+    color: #337ab7;
+}
+
+#createnew {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.after-error {
+    top: 19% !important;
+}
+
+.forgot-error {
+    color: #ff0000 !important;
+    background-color:aqua !important ;
+}
+
+

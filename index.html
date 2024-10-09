@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
+    <script src="js/login.js"></script>
+    <script src="js/Validation.min.js"></script>
+    <link rel="stylesheet" href="import/bootstrap.css">
+    <link rel="stylesheet" href="import/fonts.css">
+    <script src="import/bootstrap.js"></script>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Login</title>
+</head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var password = $("#loginpassword");
+      var showPassword = $("#showpassword");
+      showPassword.on("change", function() {
+            if (showPassword.prop("checked")) {
+              password.prop("type", "text");
+            } else {
+              password.prop("type", "password");
+            }
+         });
+    });
+  </script>
+  <style>
+
+    input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    #loginbtn:focus, #registerbtn:focus{
+      outline: none;
+      box-shadow: none; 
+	  }
+
+    #showpassword:focus {
+      outline: none;
+      box-shadow: none; 
+      border: 1px solid #cbcbcb;
+    }
+
+  </style>
+<body>
+    <div class="vh-100" style="background-color: #eee;">
+        <div class="container h-100 w-100"> 
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-6 col-xl-11">
+              <div class="card text-black">
+                <div class="card-body p-md-5">
+                  <div class="row">
+                    <div class="col-12 center-content">
+                      <div class="hr-container">
+                          <hr class="hr-line" style="margin-bottom: -2%;">
+                          <h1 style="background-color: #337ab7; color: #ffffff; padding: 3px 5px; font-weight: bold; font-size: 28px;">Login</h1>
+                          <hr class="hr-line" style="margin-bottom: -2%;">
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-xl-5 order-2 order-lg-1">
+                        <form class="form-login" id="loginform" method="post">
+                            <div class="d-flex flex-row align-items-center mb-4">
+                                <i class="fas fa-user fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                                <div class="form-outline flex-fill mb-1">
+                                  <div id="loginerror" style="font-weight: bold"></div>
+                                  <input type="text" id="loginaddress" name="useraddress" placeholder="Email or Phone" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-key fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                              <div class="position-relative flex-fill">
+                                  <input type="password" id="loginpassword" name="userpassword" class="form-control" placeholder="Password" />
+                              </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between">
+                              <div class="form-check" style="padding-left: 54px;">
+                                  <input class="form-check-input me-2" type="checkbox" value="" id="showpassword"/>
+                                  <label class="form-check-label" for="showpassword">
+                                      Show Password
+                                  </label>
+                              </div>
+
+                              <div class="text-end">
+                                  <a href="forgotpassword.html" id="forgotten">Forgotten password?</a>
+                              </div>
+                            </div>
+        
+                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                <button type="submit" name="login_button" id="loginbtn" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-log-in"></span> Sign In
+                                </button>
+                            </div>
+                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                <button type="button" id="registerbtn" name="register_button" class="btn btn-success" >
+                                    <a id="createnew" href="register.html">Create New Account</a>
+                                </button>
+                            </div>
+                        </form> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>                   
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
+    <script src="js/register.js"></script>
+    <link rel="stylesheet" href="import/bootstrap.css">
+    <link rel="stylesheet" href="import/fonts.css">
+    <script src="import/bootstrap.js"></script>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Register</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var password = $("#password");
+      var confirmPassword = $("#confirmpassword");
+      var showPassword = $("#showpassword");
+      showPassword.on("change", function() {
+            if (showPassword.prop("checked")) {
+              password.prop("type", "text");
+              confirmPassword.prop("type", "text");
+            } else {
+              password.prop("type", "password");
+              confirmPassword.prop("type", "password");
+            }
+         });
+    });
+</script>
+
+<style>
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  #showpassword:focus, #termsconditions:focus {
+      outline: none;
+      box-shadow: none; 
+      border: 1px solid #cbcbcb;
+    }
+</style>
+
+<body>
+  <div class="vh-100" style="background-color: #eee;">
+    <div class="container h-100 w-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-6 col-xl-11">
+          <div class="card text-black">
+            <div class="card-body p-md-5">
+              <div class="row">
+                <div class="col-12 center-content">
+                  <div class="hr-container">
+                      <hr class="hr-line" style="margin-bottom: -2%;">
+                      <h1 style="background-color: #337ab7; color: #ffffff; padding: 3px 5px; font-weight: bold;font-size: 28px;">Sign Up</h1>
+                      <hr class="hr-line" style="margin-bottom: -2%;">
+                  </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-xl-5 order-2 order-lg-1">
+                  <p id="registermessage" style="padding-left: 33px; font-weight: bold;"></p>
+                  <form class="form-signin" id="registerform" method="post">
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-user fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="name" name="username" placeholder="Name" class="form-control" /> 
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                      <div class="form-outline flex-fill" style="margin-right: 5px;">
+                          <input type="email" id="email" name="useremail" placeholder="Email" class="form-control" />
+                      </div>
+                      <button type="button" name="editemail" id="editemail" class="btn btn-warning" style="margin-bottom: 0px; margin-right: 5px; display: none;" onclick="editEmail()">
+                        Edit
+                      </button>
+                      <button type="button" name="otp" id="otpbtn" class="btn btn-success" style="margin-bottom: 0px;" onclick="registerotpsend()">
+                        Send Otp
+                      </button>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-phone fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="number" id="phonenumber" name="userphonenumber" class="form-control" placeholder="Phonenumber" />
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-key fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="password" name="userpassword" class="form-control" placeholder="Password" />
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-4">
+                      <i class="fas fa-check-circle fa-lg me-3 fa-fw" style="color:  #337ab7;"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="confirmpassword" name="userconfirmpassword" class="form-control" placeholder="Confirm Password" />
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4" id="otptextbox" style="display: none !important;">
+                      <i class="fas fa-paper-plane fa-lg me-3 fa-fw" style="color: #337ab7;"></i>
+                      <div class="form-outline flex-fill mb-1">
+                          <input type="number" id="otp" name="otpname" placeholder="Otp" class="form-control"/>
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                      <div class="form-check" style="padding-left: 54px;">
+                          <input class="form-check-input me-2" type="checkbox" value="" id="showpassword"/>
+                          <label class="form-check-label" for="showpassword">
+                              Show Password
+                          </label>
+                      </div>
+
+                      <div class="text-end mb-4">
+                        <input class="form-check-input me-2" type="checkbox" id="termsconditions" name="usertermsconditions" value="yes"/>
+                        <label class="form-check-label">
+                            Please agree to our <a href="terms.txt"  target="_blank" id="terms" style="color:#337ab7; text-decoration: none;"> terms & conditions</a>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="button" disabled id="registerbtn" name="btnsave" class="btn btn-primary btn-lg" onclick="register()">
+                        <span class="glyphicon glyphicon-log-in"></span> Register
+                      </button>
+                    </div>
+
+                    <div>
+                      <span style="font-weight: bolder;">Already have an account? <a href="index.html" style="text-decoration: none;">Login</a></span>
+                    </div>
+                  </form> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>                   
+</body>
+</html>
+
+
+ 
