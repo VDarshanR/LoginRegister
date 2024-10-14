@@ -1,2 +1,4 @@
 -> This project allows users to register with their details, log in with credentials, update their profiles, and reset passwords using either OTP verification or an old password. Registered information is stored in a database for verification during login, profile updates, and password resets.        
--> Validation, including OTP, is implemented to ensure the accuracy of user details during registration, login, profile updates, and password resets.
+-> Validation, including OTP, is implemented to ensure the accuracy of user details during registration, login, profile updates, and password resets.                              
+-> If you would like to contribute to this project, please fork the repository and create a new branch for your changes. Then, submit a pull request with a detailed description of your changes and why they're needed.                      
+-> If you have any questions or feedback about this project, please feel free to contact me at developerdarshan04@gmail.com
